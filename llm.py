@@ -10,7 +10,8 @@ if not OPENROUTER_API_KEY:
     raise ValueError("OPENROUTER_API_KEY not found!")
 
 llm = init_chat_model("nvidia/nemotron-3-ultra-550b-a55b:free", 
-                                model_provider="openrouter",
-                                api_key=OPENROUTER_API_KEY, 
-                                temperature=0)
+                      model_provider="openrouter",
+                      api_key=OPENROUTER_API_KEY, 
+                      temperature=0
+                      )
 
