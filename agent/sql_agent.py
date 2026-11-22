@@ -13,12 +13,11 @@ schema = db.get_table_info()
 
 
 # Create prompt template
-prompt = ChatPromptTemplate.from_messages([
+sql_prompt = ChatPromptTemplate.from_messages([
     (
         "system",
         """
         You are an expert SQL developer.
-
         Your task is to convert natural language questions
         into valid SQLite SQL queries.
 
@@ -36,9 +35,8 @@ prompt = ChatPromptTemplate.from_messages([
     ("human", "{question}")
 ])
 
-
 # Create a chain
-sql_chain = prompt | llm
+sql_chain = sql_prompt | llm
 
 
 def generate_sql(question: str):

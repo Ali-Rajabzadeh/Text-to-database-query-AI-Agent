@@ -19,11 +19,11 @@ db = SQLDatabase(engine)
 ## Execute SQL through LangChain
 # ================================================
 
-query = """
-SELECT COUNT(*) FROM customers
-"""
+# query = """
+# SELECT COUNT(*) FROM customers
+# """
 
-result = db.run(query)
+# result = db.run(query)
 
-print("\nQuery result:")
-print(result)
+# print("\nQuery result:")
+# print(result)
